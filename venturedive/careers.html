@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Career Page</title>
+</head>
+<body>
+    <!-- <header class=" flex px-4 justify-between bg-white pt-4  px-4 mb-2 " style="box-shadow: 0 2px 10px 0 whitesmoke; ">
+        <div class="w-1/4">
+        <a href="home.html"><img src="Images/home/logo.svg" alt=""> </a>    
+        </div>
+        <div class="w-2/3  ">
+            <ul class="hidden lg:flex justify-around items-center " >
+                <li>
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                          <span>Services</span>
+                          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                        
+                        <div class="flex flex-col   w-[30rem] lg:ml-[-15rem] md:flex-row">
+                          <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                            <span class="text-sm font-semibold pl-4 text-gray-400"> Services</span> 
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Software development
+                             <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                            </div>
+                            <div class="flex flex-col w-72 px-8 py-8 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                <span class="text-sm font-semibold pl-4 text-gray-400"> EXPERTISE</span> 
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                                </div>
+                        </div>    
+                        </div>
+                        </div>
+                       
+                </li>
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Industries</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                         
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Mobility & logisitics</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">On-demand services</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Financial services</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Healthcare services</a>
+                        </div> 
+                        </div></li>
+                        
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Platforms</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                         
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Salesforce</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Amazon Web Services</a>
+                         
+                        </div>
+                        </div></li>
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Products</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                        <span class="text-sm font-semibold pl-4 text-gray-400 px-2"> Movanos</span> 
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Delivery management software
+                         <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Pharmacy delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Grocery delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Food delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Flower delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">B2B delivery solution</a>
+                        </div>
+                        </div></li>
+                <li><a href="" class="text-sm text-gray-800">Clients</a></li>
+                <li><a href="" class="text-sm text-gray-800">Blog</a></li>
+                <li><a href="" class="text-sm text-gray-800">Career</a></li>
+                <li><a href="" class="text-sm text-red-500 border border-red-500 hover:bg-red-500 hover:text-white px-3 py-2 " style="border-radius: 6px;" >Contact Us</a></li>
+                        <li><div>
+                            
+                        </div></li>
+            </ul>
+
+            
+        </div>
+        <button class="lg:hidden rounded-md h-10 border-black ">
+            <div class="w-6 h-1 mx-2 my-1 rounded-md bg-black"></div>
+            <div class="w-6 h-1 mx-2 my-1 rounded-md bg-black"></div>
+            <div class="w-6 h-1 mx-2 my-1 rounded-md bg-black"></div>
+        </button>
+            
+    </header> -->
+    <div class="w-full">
+      <img class="w-full" src="Images/career/head.jpg" alt="">
+    </div>
+    <div class="h-12 "></div>
+    <div class=" mx-4 md:mx-16 xl:mx-24 max-w-6xl flex flex-col justify-start">
+        <div class="w-full md:w-2/3 pb-5 ">
+            <p class="text-red-500 text-md">Careers at VentureDive</p></div>
+        <div class="w-full md:w-2/3 md:pb-5 pr-4">
+            <h1 class="text-4xl font-bold">Steer your career in the right direction</h1></div>
+        <div class="w-full md:w-2/3 pb-5 pr-4"><p class="text-gray-900">Build a career that suits your lifestyle, in a company where your voice matters. Join us on our journey to solve real world problems for the world's leading brands, through technology.</p></div>
+        <div> <a href="" class="px-2 py-3 bg-red-600 text-white rounded-md">See all open Positions</a></div>
+      <div class="h-16 "></div>
+    </div>
+    <div class="flex justify-center">
+      <p class="text-2xl font-bold w-1/2 text-center">Working at VentureDive means flexibility, trust, and continuous learning</p>
+    </div>
+    <div class="h-16 "></div>
+    <div class="flex flex-col justify-center items-around md:flex-row">
+      <div class="flex justify-center"> <img src="Images/career/img1.jpg" alt=""></div>
+      <div class="flex-col md:w-1/2 px-8">
+        <div ><h1 class="text-xl font-bold">Rewarding</h1></div>
+      <div class="w-full pb-5"><p class="text-gray-900">Build a career that suits your lifestyle, in a company where your voice matters. Join us on our journey to solve real world problems for the world's leading brands, through technology.</p></div>
+      <div ><h1 class="text-xl font-bold">Empowering</h1></div>
+      <div class="w-full pb-5"><p class="text-gray-900">Driving strength and diversity by empowering women on every step of their career by providing the best healthcare and facilities on the house for the growing female workforce.</p></div>
+      <div ><h1 class="text-xl font-bold">Thriving</h1></div>
+      <div class="w-full pb-5"><p class="text-gray-900">A rich platform of opportunities and learning that gives room for creativity and innovation, resulting in fast-tracking your development as a leader.</p></div>
+        
+    </div>
+
+    </div>
+    <div class="h-12 "></div>
+    <div class="flex justify-center">
+      <p class="text-3xl font-bold mt-12 w-2/3 text-center">Stellar perks and benefits</p>
+    </div>
+    <div class="h-20"></div>
+    <div class="flex flex-col md:flex-row ml-8 md:justify-around md:items-center ">
+      <div class="flex flex-col mb-3 space-y-3">
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">add_location </i> <p>Remote by default</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">payments </i> <p>Annual increments</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">leaderboard</i> <p>Bi-annual promotion cycle</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">account_balance_wallet</i> <p>Provident fund</p></div>
+
+      </div>
+      
+      <div class="flex flex-col mb-3 space-y-3">
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">school </i> <p>Dedicated L&D budget</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">alarm_on</i> <p>Flexible working hours</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">child_care</i> <p>Paid Maternity & Paternity
+        </p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">health_and_safety</i> <p>Health insurance </p></div>
+
+      </div>
+      <div class="flex flex-col space-y-3">
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">drive_eta</i> <p>
+          Car support program</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">child_friendly </i> <p>In-house daycare</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">poll</i> <p>Employee stock options</p></div>
+        <div class="flex flex-row space-x-8"><i class="material-icons text-primary">credit_score</i> <p>Interest-free loans</p></div>
+
+      </div>
+
+    </div>
+    <div class="h-20"></div>
+    <div class="flex flex-col bg-gray-100 px-2 justify-center items-center">
+      <div class="h-24"></div>
+      <div class="text-2xl mb-12 font-semibold text-red-600 w-full md:w-11/12">Join the dream team now</div>
+      <div class="text-xl mb-4 font-bold w-full md:w-11/12">General</div>
+      <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+        <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold " style="margin-top: auto; margin-bottom: auto;">Network & Security Engineer</p></div>
+         <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 " style="margin-top: auto; margin-bottom: auto;">Pakistan</p></div>
+        </div>
+        <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+          <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Salesforce Senior Technical Consultant</p></div>
+           <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+          </div>
+          <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+            <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Senior Software Engineer - Android</p></div>
+             <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+            </div>
+            <div class="flex  justify-between items-center bg-white px-4 my-2 mb-8 w-full md:w-11/12">
+              <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Senior Software Engineer - Java</p></div>
+               <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+              </div>
+        <div class="text-xl mb-4 font-bold w-full md:w-11/12">Consulting</div>
+      
+        
+        <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+          <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Lead DevOps Engineer</p></div>
+           <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+          </div>
+          <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+            <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Lead GCP DevOps Engineer</p></div>
+             <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+            </div>
+            <div class="flex  justify-between items-center bg-white px-4 my-2 mb-8 w-full md:w-11/12">
+              <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Senior DevOps Engineer</p></div>
+               <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+              </div>
+        <div class="text-xl mb-4 font-bold w-full md:w-11/12">Engineering</div>
+      <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+        <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Network & Security Engineer</p></div>
+         <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">remote</p></div>
+        </div>
+        <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+          <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Salesforce Senior Technical Consultant</p></div>
+           <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+          </div>
+          <div class="flex  justify-between items-center bg-white px-4 my-2 w-full md:w-11/12">
+            <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Senior Software Engineer - Android</p></div>
+             <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+            </div>
+            <div class="flex  justify-between items-center bg-white px-4 my-2 mb-8 w-full md:w-11/12">
+              <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Senior Software Engineer - Java</p></div>
+               <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">Remote</p></div>
+              </div>
+        <div class="text-xl mb-4 font-bold w-full md:w-11/12">Strategic Sales</div>
+      <div class="flex  justify-between items-center bg-white px-4 my-2 mb-12 w-full md:w-11/12">
+        <div class="text-start flex w-1/2 py-3"><p class="text-base mb-12 font-bold "style="margin-top: auto; margin-bottom: auto;">Services - Business Development Manager</p></div>
+         <div class="text-center block w-1/2 py-3" ><p class="text-base mb-12 "style="margin-top: auto; margin-bottom: auto;">United States</p></div>
+        </div>
+      
+
+    </div>
+    <div class="w-full" style="background: linear-gradient(to left, #ee1331, #ed9153);">
+      <div class="flex flex-col justify-center items-center py-16" >
+        <div><p class="text-white text-center text-3xl font-bold">Awarded the Best Place to Work</p></div>
+        <div><p class="text-white text-center text-3xl px-3">based on our culture, values, & global impact</p></div>
+        <div class="flex flex-col md:flex-row justify-around mt-8 md:mt-20 ">
+          <div class="flex flex-col items-center text-center md:w-1/3"><img src="images/career/star.png" alt="">
+          <p class="text-white text-center text-xl md:w-2/3 font-bold">#1 Best place to work in Pakistan overall 2021</p></div>
+
+          <div class="flex flex-col items-center text-center md:w-1/3"><img src="images/career/star.png" alt="">
+            <p class="text-white text-center text-xl md:w-2/3  font-bold">#1 Best place to work in Pakistan overall 2021</p></div>
+
+            <div class="flex flex-col items-center text-center md:w-1/3"><img src="images/career/star.png" alt="">
+              <p class="text-white text-center text-xl md:w-2/3 font-bold">#1 Best place to work in Pakistan overall 2021</p></div>
+          
+
+
+        </div>
+        <div class="mt-16"><p class="text-white text-center text-3xl pb-8 font-bold">What employees are saying</p></div>
+        <div><img class="w-[25rem] md:w-[28rem] bg-white  px-8 py-4 rounded-md" src="images/career/img2.png" alt=""></div>
+        <div class="mt-4"><p class="text-white text-center text-base pb-8 ">82% employees recommend VentureDive on Glassdoor</p></div>
+      </div>
+
+
+    </div>
+    <footer>
+      <div class="flex flex-col md:flex-row space-y-8 items-center md:justify-around py-8 md:py-20 ">
+          <div><img src="Images/home/logo.svg" alt=""></div>
+          <div><p>© 2022 VentureDive. All rights reserved.</p> </div>
+          <div class="flex justify-center md:justify-around space-x-2 md:space-x-4">
+              <span class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></span>
+              <span  class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></span>
+              <span class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></span>
+          </div>
+  
+      </div>
+      </footer>
+</body>
+</html>

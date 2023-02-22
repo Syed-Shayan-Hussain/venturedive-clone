@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    
+    <link rel="stylesheet" href="url-to-cdn/splide.min.css">
+    <title>Venture Dive</title>
+</head>
+<body class="m-0 w-full">
+    <header class="fixed w-full flex px-4 justify-between bg-white pt-4 pb-2 px-4 mb-2 z-[1] " style="box-shadow: 0 2px 10px 0 whitesmoke; ">
+        <div class="w-1/4">
+        <a href="index.html"><img src="Images/home/logo.svg" alt=""> </a>    
+        </div>
+        <div class="w-2/3  ">
+            <ul  class="  hidden lg:flex lg:flex-row justify-around items-center " >
+                <li>
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                          <span>Services</span>
+                          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                        
+                        <div class="flex flex-col   w-[30rem] lg:ml-[-15rem] md:flex-row">
+                          <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                            <span class="text-sm font-semibold pl-4 text-gray-400"> Services</span> 
+                            <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="services1.html">Software development
+                             <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                             <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                            </div>
+                            <div class="flex flex-col w-72 px-8 py-8 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                <span class="text-sm font-semibold pl-4 text-gray-400"> EXPERTISE</span> 
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                                 <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                                </div>
+                        </div>    
+                        </div>
+                        </div>
+                       
+                </li>
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Industries</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                         
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Mobility & logisitics</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">On-demand services</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Financial services</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Healthcare services</a>
+                        </div> 
+                        </div></li>
+                        
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Platforms</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                         
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Salesforce</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Amazon Web Services</a>
+                         
+                        </div>
+                        </div></li>
+                <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                      <span>Products</span>
+                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    
+                    <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                      <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                        <span class="text-sm font-semibold pl-4 text-gray-400 px-2"> Movanos</span> 
+                        <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Delivery management software
+                         <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Pharmacy delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Grocery delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Food delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Flower delivery solution</a>
+                         <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">B2B delivery solution</a>
+                        </div>
+                        </div></li>
+                <li><a href="clients.html" class="text-sm text-gray-800">Clients</a></li>
+                <li><a href="blog.html" class="text-sm text-gray-800">Blog</a></li>
+                <li><a href="careers.html" target="_blank" class="text-sm text-gray-800">Career</a></li>
+                <li><a href="contact.html" class="text-sm text-red-500 border border-red-500 hover:bg-red-500 hover:text-white px-3 py-2 " style="border-radius: 6px;" >Contact Us</a></li>
+                    
+    
+            </ul>
+    
+            <ul id="nav-menu" class="close w-full flex flex-col bg-white absolute top-[-300px] lg:hidden  justify-around items-start " >
+              
+              <li>
+                
+                  <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                      <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                        <span>Services</span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      </button>
+                      <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                      
+                      <div class="flex flex-col   w-[30rem] lg:ml-[-15rem] md:flex-row">
+                        <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                          <span class="text-sm font-semibold pl-4 text-gray-400"> Services</span> 
+                          <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="services1.html">Software development
+                           <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                           <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                           <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                           <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                           <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                          </div>
+                          <div class="flex flex-col w-72 px-8 py-8 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                              <span class="text-sm font-semibold pl-4 text-gray-400"> EXPERTISE</span> 
+                               <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Discovery Workshop</a>
+                               <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">MVP Development</a>
+                               <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Teams as a Service</a>
+                               <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Tech audit & advisory</a>
+                              </div>
+                      </div>    
+                      </div>
+                      </div>
+                     
+              </li>
+              <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                    <span>Industries</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                  
+                  <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                    <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                       
+                      <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Mobility & logisitics</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">On-demand services</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Financial services</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Healthcare services</a>
+                      </div> 
+                      </div></li>
+                      
+              <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                    <span>Platforms</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                  
+                  <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                    <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                       
+                      <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Salesforce</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Amazon Web Services</a>
+                       
+                      </div>
+                      </div></li>
+              <li><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open" class="flex flex-row items-center w-full  py-2 mt-2 text-sm  text-left   dark-mode:hover:text-white  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-500  focus:outline-none focus:shadow-outline">
+                    <span>Products</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                  
+                  <div class="flex flex-col   w-[20rem] lg:ml-[-8rem] md:flex-row">
+                    <div class="flex flex-col  px-8 py-8 w-96 px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                      <span class="text-sm font-semibold pl-4 text-gray-400 px-2"> Movanos</span> 
+                      <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Delivery management software
+                       <span class="text-xs bg-red-500 text-white rounded-sm px-1">Featured</span></a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Pharmacy delivery solution</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Grocery delivery solution</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Food delivery solution</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">Flower delivery solution</a>
+                       <a class="block px-4 py-2 mt-2 text-sm  bg-transparent rounded-md dark-mode:bg-transparent  md:mt-0 hover:bg-red-200 focus:shadow-outline" href="#">B2B delivery solution</a>
+                      </div>
+                      </div></li>
+              <li><a href="clients.html" class="text-sm text-gray-800">Clients</a></li>
+              <li><a href="blog.html" class="text-sm text-gray-800">Blog</a></li>
+              <li><a href="careers.html" target="_blank" class="text-sm text-gray-800">Career</a></li>
+              <li><a href="contact.html" class="text-sm text-red-500 border border-red-500 hover:bg-red-500 hover:text-white px-3 py-2 " style="border-radius: 6px;" >Contact Us</a></li>
+                  
+    
+          </ul>
+            
+        </div>
+        <button onclick="navbar()" class="flex   lg:hidden flex-col items-center justify-center  space-y-1 "><div class="h-1 w-6 bg-black"></div>
+          <div class="h-1 w-6 bg-black"></div>
+          <div class="h-1 w-6 bg-black"></div></button>
+            
+    </header>
+    <div class=" w-full flex flex-col items-center text-center justify-center bg-cover font-sans " style="background: url(images/home/shapes\ \(1\).png) no-repeat center/cover;  ">
+        <div class="h-12 md:h-24 lg:h-44 "></div>
+        <div>
+            <p class="text-red-500 mb-2">Design. Development. Consultancy.</p>
+
+        </div>
+        <div>
+            <h1 class="text-5xl px-8 lg:text-6xl max-w-6xl font-semibold leading-20 tracking-tight" style="color: #0d2225;">We build custom software that drives innovation and social impact</h1>
+        </div>
+        <div class="mt-20 lg:mt-28">
+            <p><a href="" class="bg-red-600 py-3 px-5 text-white rounded"> Let's get to work </a></p>
+        </div>
+        <div class="h-12 lg:h-52"></div>
+    </div>
+    <div class="text-center mb-2">
+        <p style="color:#606f7b;">
+            Trusted by enterprises, and high-growth startups worldwide</p>
+    </div>
+    <div class="h-8 lg:h-12"></div>
+    <div class="hidden md:flex md:flex-wrap items-center  justify-center w-max-6xl mx-16 ">
+        <div class="w-1/4">
+            <img src="images/home/logos-1.png" alt="">
+        </div>
+        <div class="w-1/4">
+            <img src="images/home/logos-2.png" alt="">
+        </div>
+        <div class="w-1/4">
+            <img src="images/home/logos-3.png" alt="">
+        </div>
+        <div class="w-1/4">
+            <img src="images/home/logos-4.png" alt="">
+        </div>
+
+    </div>
+    <div class="splide block mx-8 md:hidden " id="splide1" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track       ">
+              <ul class="splide__list">
+                  <li class="splide__slide"><img class="w-full" src="images/home/logos-1.png" alt=""></li>
+                  <li class="splide__slide"><img class="w-full" src="images/home/logos-2.png" alt=""></li>
+                  <li class="splide__slide"><img class="w-full" src="images/home/logos-3.png" alt=""></li>
+                  <li class="splide__slide"><img class="w-full" src="images/home/logos-4.png" alt=""></li>
+              </ul>
+        </div>
+      </div>
+    <div class="h-12 md:h-24 lg:h-52"></div>
+    <div class=" mx-4 md:mx-16  flex flex-col justify-start">
+        <div class="w-full md:w-1/2 pb-5 ">
+            <p class="text-gray-500">WHAT WE DO</p></div>
+        <div class="w-full md:w-1/2 md:pb-5 pr-4">
+            <h1 class="text-3xl font-bold">The entire cycle of software development effortlessly handled for you.</h1></div>
+        <div class="w-full md:w-1/2 pb-5 pr-4"><p class="text-gray-500">Whether you’re a Fortune 500 or a startup in stealth mode – we give our clients the creative, technical and business talent they need to succeed.</p></div>
+
+    </div>
+    <div class="bg-gray-100 pb-20">
+        <div class="h-12 lg:28"></div>
+
+    <div class="px-4 md:px-16 ">
+        <div class="flex flex-col sm:flex-wrap sm:flex-row justify-center lg:justify-between  mb-5 md:mb-8 items center ">
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+            <a id="card" class="border border-gray-500 w-full sm:w-1/5 mx-1 my-3 py-4 px-8  md:h-54 rounded-md"  href=""> 
+                
+                <h1 class=" font-semibold pb-2">Ideation & Discovery</h1>
+                <p class="  pb-5">Validate your solution idea, targeting and get answers to
+                    critical business questions early on to reduce the risk of
+                    failure.</p>
+            </a>
+
+
+    </div>
+</div>        
+</div>
+</div>
+<div class="h-36"></div>
+<div class="flex flex-col justify-center  items-center md:mx-16  ">
+    <div class="flex flex-col md:flex-row justify-center items-center max-w-6xl" >
+        
+        <div class="flex-col mb-16  md:w-1/2 ">
+            
+            <div  class="md:h-24 "></div>
+            <div class="flex w-full  flex-col px-4  justify-center" >
+            <p class="pb-5">Careem</p>
+            <h1 class="text-3xl font-semibold pb-5" >Moving people through an e-hail service platform where Riders & Captains can functionally interact</h1>
+                <a href="" class="flex items-center space-x-2">
+                <span  class=" flex justify-center items-center border-2 w-8 hover:pl-1 test-center h-8 border-red-500 hover:bg-red-600 hover:border-0 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red " class=" hover:fill-white w-8 h-8">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  </span>
+                  <p class="font-bold hover:pl-1">Read Case Study</p>
+                </a>
+            </div>
+           
+
+        </div>
+        <div class="w-full md:w-[30rem] flex reveal " style="margin-left: auto; margin-right: auto;">
+            <img src="images/home/home1.png" alt="">
+        </div>
+        <!-- <div class="flex items-start mr-96 md:ml-32 md:w-1/2 md:mr-12" style="margin-top: -40px; ">
+            <img src="images/home/careem-layer1.png" class="absolute sm:ml-28 w-44 ml-20 mt-12 sm:mt-[-10px]  sm:w-64" alt="">
+
+            <img src="Images/home/careem-layer2.webp" class="absolute mt-24 ml-8 sm:mt-24 w-60 sm:w-80" alt="">
+            
+            <img src="images/home/careem-layer-4.png" class="absolute ml-52 mt-8 w-44 sm:w-60 sm:ml-60" alt="">
+            <img src="images/home/careem-layer 3.webp" class="absolute ml-12 mt-4 w-56 sm:ml-12 sm:w-72" alt="">
+        </div> -->
+
+    </div>
+
+     
+
+    <div class="flex flex-col mt-12 md:mt-12 md:flex-row justify-around max-w-6xl items-center">
+        <!-- <div class="flex items-start mr-96 ml-3 md:w-1/2 md:m-0" style="margin-top: -40px; margin-left: auto; margin-right: auto;">
+            <img src="images/home/athan-layer1.png" class="absolute ml-[-80px] sm:w-96 sm:ml-20 sm:mt-12 w-72"  alt="">
+           <img src="images/home/athan-layer6.png" class="absolute w-28 ml-[-100px] mt-[-12px] sm:w-36 sm:ml-16 sm:mt-8" alt="">
+            <img src="images/home/athan-layer2.png" class="absolute ml-[-100px] mt-12 w-72 sm:mt-28 sm:ml-12 sm:w-[28rem] " alt="">
+            <img src="Images/home/athan-layer5.png" class="sm:w-28 w-16 mt-16 ml-32 sm:mt-44 sm:ml-96"  alt="">
+            <img src="images/home/athan-layer3-1.webp" class="absolute w-40 ml-[-30px] sm:w-56 sm:mt-[2.5rem] sm:ml-40" alt="">
+            <img src="images/home/athan-layer4-1.webp" class="absolute w-40 ml-12 mt-28 sm:w-48 sm:mt-64 sm:ml-72" alt="">
+        </div> -->
+        <div class="w-full md:w-[30rem] flex reveal" style="margin-left: auto; margin-right: auto;">
+            <img src="images/home/home2.png" alt="">
+        </div>
+        <div class="flex-col mb-16  md:w-1/2 ">
+            
+            <div class="flex w-full  flex-col px-4 " style="margin-left: 0; margin-right: auto" >
+            <p class="pb-5">ISLAMICFINDER</p>
+            <h1 class="text-3xl font-semibold pb-5" >Connecting Muslims globally via a mobile app for accurate prayer times, Quran, Athan & more</h1>
+                <a href="" class="flex items-center space-x-2">
+                <span  class=" flex justify-center items-center border-2 w-8 hover:pl-1 test-center h-8 border-red-500 hover:bg-red-600 hover:border-0 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red " class=" hover:fill-white w-8 h-8">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  </span>
+                  <p class="font-bold hover:pl-1">Read Case Study</p>
+                </a>
+            </div>
+           
+
+        </div>
+        
+
+    </div>
+
+    <div class="h-8 lg:h-0"></div>
+
+    <div class="flex flex-col md:flex-row justify-around md:mx-8 max-w-6xl items-center ">
+        
+        <div class="flex-col mb-16 justify-center md:justify-start md:w-1/2 ">
+            
+            <div  class="md:h-60"></div>
+            <div class="flex flex-col px-4 justify-start">
+            <p class="pb-5">TEZ FINANCIAL SERVICES</p>
+            <h1 class="text-3xl font-semibold pb-5" >Enabling access to instant cash through technology for financial inclusion
+            </h1>
+                <a href="" class="flex items-center space-x-2">
+                <span  class=" flex justify-center items-center border-2 w-8 hover:pl-1 test-center h-8 border-red-500 hover:bg-red-600 hover:border-0 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red " class=" hover:fill-white w-8 h-8">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  </span>
+                  <p class="font-bold hover:pl-1">Read Case Study</p>
+                </a>
+            </div>
+           
+
+        </div>
+        <!-- <div class="flex items-start mr-96  md:ml-32 md:w-1/2 md:mr-12 " style="margin-top: -40px; ">
+            <img src="images/home/tez-layer1.png" class="absolute ml-4 sm:ml-20 w-52 sm:w-64" alt="">
+
+            <img src="Images/home/tez-layer2-1.webp" class="absolute ml-[-40px] mt-16 sm:mt-24 w-60 sm:w-80" alt="">
+            
+            <img src="images/home/tez-layer3-1.webp" class="absolute w-44 ml-40 mt-[-25px] sm:w-60 sm:ml-60" alt="">
+            <img src="images/home/tez-layer4.png" class="absolute w-24 sm:w-32 sm:ml-36 sm:mt-60 ml-24 mt-40" alt="">
+        </div> -->
+        <div class="w-full  md:w-[30rem] flex reveal" style="margin-left: auto; margin-right: auto; ">
+            <img src="images/home/home3.png" alt="">
+
+        </div>
+        
+    </div>
+    <div class="h-32"></div>
+    <div class="splide flex justify-around mx-8 space-x-2 max-w-5xl " id="splide2" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track       ">
+              <ul class="splide__list">
+                <li class="splide__slide"><div class=" lg:w-72 "><img  src="images/home/img1.png" alt="">
+                <!-- <p class="md:text-lg font-semibold text-center">Fastest Growing App Development Companies</p> -->
+            </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "> <img src="images/home/img2.png" alt=""> 
+                <!-- <p class="md:text-lg font-semibold text-center">Top 50+ iPhone And iOS Mobile App Companies</p> -->
+            </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "><img src="images/home/badge1.png" alt="">
+                <!-- <p class="md:text-lg font-semibold text-center">Finest 500 App Developers 2022</p><p class="text-md text-center">Recognized as the Finest 500 App Developers of 2022 by TopDevelopers.co</p> -->
+            </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "><img class="lg:w-72" src="images/home/badge.png" alt="">
+                <!-- <p class="md:text-lg font-semibold text-center">Top Flutter App Developers 2021</p>
+            <p class="text-md text-center">Recognized as the Top Flutter App Developers of 2021 by
+                TopDevelopers.co</p> -->
+            </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "><img class="lg:w-72" src="images/home/award5.webp" alt="">
+                <!-- <p class="md:text-lg font-semibold text-center">Top Mobile App Developers USA</p>
+            <p class="text-md text-center">Recognized as the Top Mobile App Developers of 2020 in USA.</p> -->
+        </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "><img class="lg:w-72" src="images/home/award4.webp" alt="">
+                    <!-- <p class="md:text-lg font-semibold text-center">Top Software Developers 2020</p><p class="text-md text-center">TechReviewer recognizes VentureDive as the Top Software
+                    Developers 2020</p> -->
+                </div></li>
+                <li class="splide__slide"><div class=" lg:w-72 "><img class="lg:w-72" src="images/home/award2.webp" alt="">
+                    <!-- <p class="md:text-lg font-semibold text-center">Top Mobile App Developers 2020</p> <p class="text-md text-center">Clutch awards VentureDive the Top Mobile App Developers 2020
+                    award</p> -->
+                </div></li>
+              </ul>
+        </div>
+      </div>
+    
+
+      
+</div>
+
+
+<footer>
+    <div class="flex flex-col md:flex-row space-y-8 items-center md:justify-around py-8 md:py-20 ">
+        <div><img src="Images/home/logo.svg" alt=""></div>
+        <div><p>© 2022 VentureDive. All rights reserved.</p> </div>
+        <div class="flex justify-center md:justify-around space-x-2 md:space-x-4">
+            <span class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></span>
+            <span  class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></span>
+            <span class=" flex justify-center items-center  h-12 w-12  rounded-full" style="box-shadow: 0 2px 5px 0 gray;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></span>
+        </div>
+
+    </div>
+</footer>
+</body>
+<style>
+    #card{
+        color: #606f7b;
+    }
+    #card:hover{
+        color: white;
+        
+        background: linear-gradient(90deg, rgba(232,55,20,1) 47%, rgba(248,86,0,1) 100%);
+    }
+    .reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+</style>
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } 
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+</script>
+<script>document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#splide1' );
+    splide.mount();
+
+    
+
+
+    var splide = new Splide( '#splide2', {
+    type   : 'loop',
+    perPage: 3,
+    perMove: 1,
+    autoplay: true,
+    } );
+
+    splide.mount();
+  } );</script>
+<script>
+    let nav = document.getElementById("nav-menu")
+    function navbar() {
+      if(nav.classList.contains("close"))
+      { 
+        nav.classList.add("top-12")
+        nav.classList.remove("close")
+      }
+      else{
+        nav.classList.remove("top-12")
+        nav.classList.add("close")
+      }
+      
+  
+    }
+  </script>
+</html>
